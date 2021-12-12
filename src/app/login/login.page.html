@@ -1,0 +1,58 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar id="lgheaderbar">
+      <ion-title id="titleion" size="medium" class="ion-text-center">Login Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <form [formGroup]="uyelikBilgisi" (ngSubmit)="login()">
+    <div id="container">
+      <div class="input-group">
+
+        <ion-item>
+          <ion-input placeholder="Email" name="email" type="email" formControlName="email"></ion-input>
+        </ion-item>
+
+
+
+        <ion-item>
+          <ion-input placeholder="Password" type="password" formControlName="password"></ion-input>
+        </ion-item>
+        <div class="erroritems">
+          <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+            <span *ngIf="email.errors?.required">Email required!</span>
+            <span *ngIf="email.errors?.email">Email is invalid!</span>
+          </div>
+
+          <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+            <span *ngIf="password.errors?.required">Password required!</span>
+            <span *ngIf="password.errors?.minlength">Your password must be at least 6 characters!</span>
+          </div>
+        </div>
+        <div class="logbuttons">
+
+          <ion-button color="dark" type="text" [disabled]="!uyelikBilgisi.valid">
+            Login</ion-button>
+
+          <ion-button color="dark" (click)="gitRegister()">
+            Register</ion-button>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="dark" (click)="git(usernameModel)">
+      <ion-icon color="light" name="information-circle-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

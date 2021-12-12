@@ -1,0 +1,32 @@
+<ion-header [translucent]="true"></ion-header>
+  
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-buttons slot="primary" id="circlebutton">
+        <ion-button  (click)="exit()">
+          <ion-icon  slot="icon-only" name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-title size="medium" color="primary" class="ion-text-center">List</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+  <div class="items">
+    <ion-item *ngFor="let veri of veriler" (click)="detayGit(veri)">
+      <ion-thumbnail slot="start">
+        <ion-img [src]= "veri.avatar"> </ion-img>
+      </ion-thumbnail>
+      <ion-label>{{veri.first_name}} {{veri.last_name}}
+      </ion-label>
+    </ion-item>
+  </div>
+
+
+
+  
+</ion-content>

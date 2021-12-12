@@ -1,0 +1,82 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  } 
+
+
+
+  ion-content{
+    --background: url(../../assets/mobile-video-game-vector-background-4406706_1280.png) 0 0/100% 100%  no-repeat;
+  }
+  
+  
+  .erroritems {
+    margin-top: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+  }
+ 
+  .errors {
+    color: #fff;
+    margin: 1rem;
+    z-index: 3;
+  }
+
+.logbuttons{
+  margin-top: 1rem;
+}
+
+ion-button{
+  font-weight: bold;
+}
+
+  
+ion-item{
+    border-top-right-radius: 3rem;
+    
+    width: 20rem;
+    margin: 0 auto;
+  }
+
+ion-item:nth-child(1){
+   border-top-left-radius: 1rem;
+    
+  }
+ion-item:nth-child(2){
+  margin-top: -1px;
+  border-bottom-left-radius: 3rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 1rem;
+  box-shadow: 2px 20px 48px 5px #2c2c2c;
+  
+}
+
+ion-input{
+    min-height: 3.5rem;
+  }
